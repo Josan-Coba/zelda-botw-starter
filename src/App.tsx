@@ -12,7 +12,7 @@ function App() {
           <div className="w-full xl:w-1/2">
             <ItemsGrid itemsPerPage={itemsPerPage} />
           </div>
-          <div className="w-full xl:w-1/2 bg-teal-700"></div>
+          {/* <div className="w-full xl:w-1/2 bg-teal-700"></div> */}
         </div>
       </div>
     </SelectedItemProvider>

@@ -1,5 +1,5 @@
 {
-  "name": "zelda-botw-starter",
+  "name": "zelda-botw-ui-web-replica",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,6 +26,8 @@
   "scripts": {
     "start": "run-p watch:css react-scripts:start",
     "build": "run-s build:css react-scripts:build",
+    "predeploy": "npm run build",
+    "deploy": "node -r dotenv/config scripts/deploy.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/index.css",
@@ -49,6 +51,8 @@
     ]
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.10"
+    "@auth0/s3": "^1.0.0",
+    "@types/classnames": "^2.2.10",
+    "dotenv": "^8.2.0"
   }
 }
