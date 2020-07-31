@@ -1,15 +1,22 @@
-import React from "react";
-import { ReactComponent as Triforce } from "./assets/triforce.svg";
+import React from 'react'
+import ItemsGrid from './components/ItemsGrid'
+import { SelectedItemProvider } from './components/SelectedItemProvider'
 
 function App() {
+  const itemsPerPage = 20
+
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <h1 className="flex items-center font-bold text-5xl tracking-tight text-gray-900">
-        Zelda BOTW Starter
-        <Triforce className="ml-4 w-20 h-20 text-zelda-yellow fill-current" />
-      </h1>
-    </div>
-  );
+    <SelectedItemProvider>
+      <div className="min-h-screen bg-zelda-darkGreen">
+        <div className="container mx-auto flex flex-col xl:flex-row">
+          <div className="w-full xl:w-1/2">
+            <ItemsGrid itemsPerPage={itemsPerPage} />
+          </div>
+          <div className="w-full xl:w-1/2 bg-teal-700"></div>
+        </div>
+      </div>
+    </SelectedItemProvider>
+  )
 }
 
-export default App;
+export default App
