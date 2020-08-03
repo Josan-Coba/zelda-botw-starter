@@ -29,7 +29,7 @@ const Item: React.FC<ItemProps> = (props) => {
       {data && (
         <>
           <img alt={data.name} src={data.icon} />
-          <div className="absolute right-0 bottom-0 -mx-1 -my-1 z-0 text-white text-sm italic border border-zelda-darkGray bg-black px-2">
+          <div className="absolute right-0 bottom-0 -mx-1 -my-1 z-0 text-white text-sm border border-zelda-darkGray bg-black px-2">
             {data.value}
           </div>
         </>
