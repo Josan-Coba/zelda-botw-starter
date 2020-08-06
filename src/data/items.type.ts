@@ -12,13 +12,21 @@ export enum ItemMainCategory {
   ARMOR = 'armor',
 }
 
+export enum BonusType {
+  Climbing = 'climbing',
+  Fire = 'fire',
+  Swimming = 'swimming',
+}
+
+export type BonusLevel = 0 | 1 | 2 | 3
+
 export type ItemType = {
   name: string
   category: ItemCategory
   icon: string
   value: string
   description: string
-  bonus?: string
+  bonus?: BonusType
   isNew?: boolean
 }
 

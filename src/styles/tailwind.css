@@ -3,3 +3,5 @@
 @tailwind utilities;
 @import './calamity-font.css';
 @import './triangle.css';
+@import './background.css';
+@import './endurance-gauge.css';

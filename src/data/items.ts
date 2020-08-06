@@ -1,4 +1,8 @@
-import ItemsType, { ItemCategory, ItemMainCategory } from './items.type'
+import ItemsType, {
+  ItemCategory,
+  ItemMainCategory,
+  BonusType,
+} from './items.type'
 
 export default {
   [ItemMainCategory.WEAPON]: [
@@ -124,7 +128,7 @@ export default {
       category: ItemCategory.HELM,
       icon: process.env.PUBLIC_URL + 'items/armors/BotW_Zora_Helm_Icon.png',
       value: '3',
-      bonus: 'swimming',
+      bonus: BonusType.Swimming,
       description:
         'Zora headgear made from dragon scales. Increases swimming speed and allows you to use Spin Attack.',
     },
@@ -133,7 +137,7 @@ export default {
       category: ItemCategory.ARMOR,
       icon: process.env.PUBLIC_URL + 'items/armors/BotW_Zora_Armor_Icon.png',
       value: '3',
-      bonus: 'swimming',
+      bonus: BonusType.Swimming,
       description:
         "Custom armor painstakingly crafted by each generation's Zora princess for her future husband. Wearing it will give you the ability to swim up waterfalls.",
     },
@@ -142,7 +146,7 @@ export default {
       category: ItemCategory.GREAVE,
       icon: process.env.PUBLIC_URL + 'items/armors/BotW_Zora_Greaves_Icon.png',
       value: '3',
-      bonus: 'swimming',
+      bonus: BonusType.Swimming,
       description:
         "These greave have been passed down among the Zora for generations. It's been said they're crafted using dragon scales. Equip them to swim faster.",
     },
@@ -153,7 +157,7 @@ export default {
         process.env.PUBLIC_URL +
         "items/armors/BotW_Climber's_Bandanna_Icon.png",
       value: '3',
-      bonus: 'climbing',
+      bonus: BonusType.Climbing,
       description:
         "It may look like a regular bandanna, but it's actually infused with ancient technology that enhances core strength to improve your climbing ability.",
     },
@@ -162,7 +166,7 @@ export default {
       category: ItemCategory.ARMOR,
       icon: process.env.PUBLIC_URL + 'items/armors/BotW_Climbing_Gear_Icon.png',
       value: '3',
-      bonus: 'climbing',
+      bonus: BonusType.Climbing,
       description:
         'The ancient technology in this gear will make you a better climber. The special no-slip gloves help you use your energy more efficiently to facilitate nimble climbing.',
     },
@@ -172,7 +176,7 @@ export default {
       icon:
         process.env.PUBLIC_URL + 'items/armors/BotW_Climbing_Boots_Icon.png',
       value: '3',
-      bonus: 'climbing',
+      bonus: BonusType.Climbing,
       description:
         'These rock-climbing boots have special no-slip toes that help you cling to walls. This ancient technology facilitates more nimble climbing.',
     },
@@ -182,7 +186,7 @@ export default {
       icon:
         process.env.PUBLIC_URL + 'items/armors/BotW_Flamebreaker_Helm_Icon.png',
       value: '3',
-      bonus: 'fire',
+      bonus: BonusType.Fire,
       description:
         "Stone headgear made by Goron craftsmen to protect tourists visiting Goron City. As if its flame resistance isn't enough of a selling point, it also covers your entire head!",
     },
@@ -193,7 +197,7 @@ export default {
         process.env.PUBLIC_URL +
         'items/armors/BotW_Flamebreaker_Armor_Icon.png',
       value: '3',
-      bonus: 'fire',
+      bonus: BonusType.Fire,
       description:
         "Armor crafted by Gorons for Hylians curious enough to visit Goron City. It's made from fire-resistant rocks to protect the wearer.",
     },
@@ -204,7 +208,7 @@ export default {
         process.env.PUBLIC_URL +
         'items/armors/BotW_Flamebreaker_Boots_Icon.png',
       value: '3',
-      bonus: 'fire',
+      bonus: BonusType.Fire,
       description:
         'Goron artisans used flame-resistant rocks to craft these fireproof boots for curious Hylians visiting Goron City.',
     },

@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { Armor, Shield, Sword } from './icons'
 import { ItemMainCategory } from '../data/items.type'
+import { usePlayAction } from '../hooks/sound'
 
 const categoryMapping = {
   [ItemMainCategory.WEAPON]: Sword,
@@ -21,6 +22,7 @@ const CategoriesMenu: React.FC<CategoriesMenuProps> = (props) => {
     [ItemMainCategory.SHIELD, Shield],
     [ItemMainCategory.ARMOR, Armor],
   ]
+  const playAction = usePlayAction()
 
   return (
     <div className="flex flex-row justify-center items-center mb-6 z-20">
@@ -39,7 +41,10 @@ const CategoriesMenu: React.FC<CategoriesMenuProps> = (props) => {
           <CategoryIcon
             className={classes}
             key={category}
-            onClick={() => navigateToCategory(category)}
+            onClick={() => {
+              playAction()
+              navigateToCategory(category)
+            }}
           />
         )
       })}

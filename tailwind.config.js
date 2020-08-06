@@ -21,6 +21,7 @@ module.exports = {
           lightYellow: '#FFFFBE',
           softYellow: '#f8f7d9',
           bgBlackTransparent: 'rgba(0, 0, 0, 0.5)',
+          bgModal: 'rgba(0, 0, 0, 0.85)',
         },
       },
       boxShadow: {
